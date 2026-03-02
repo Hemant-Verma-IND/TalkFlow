@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Branding & SEO -->
+    <meta name="theme-color" content="#0b0e14" />
+    <meta
+      name="description"
+      content="TalkFlow is a premium, encrypted vault for visualizing and archiving sensitive communication streams. Secure, self-hosted, and beautiful."
+    />
+    <meta name="keywords" content="Secure Chat, Encryption, Archive, WhatsApp Export, Data Privacy" />
+    <meta name="author" content="Hemant Verma" />
+    
+    <!-- Apple Touch Icon -->
+<link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/logo.svg" />
+<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.svg" />
+
+    <!-- Typography: Inter Font (Premium SaaS Look) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>TalkFlow | Secure Archive</title>
+
+    <!-- Critical CSS: Prevents White Flash before React loads -->
+    <style>
+      :root {
+        --bg-deep: #0b0e14;
+        --accent: #3b82f6;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-deep); /* Immediate dark mode */
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow: hidden; /* Prevents scrollbars during loading */
+      }
+
+      /* Optional: A tiny CSS-only loader to show while React mounts */
+      #root:empty {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #root:empty::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(59, 130, 246, 0.3);
+        border-top-color: #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="color: white; text-align: center; padding-top: 50px;">
+        You need to enable JavaScript to run TalkFlow Secure Archive.
+      </div>
+    </noscript>
+    
+    <div id="root"></div>
+  </body>
+</html>

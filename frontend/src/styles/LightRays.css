@@ -1,0 +1,17 @@
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0; /* Behind content */
+  pointer-events: none; /* Allows clicking through it */
+}
+
+.light-rays-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8; /* Slight transparency for blending */
+}

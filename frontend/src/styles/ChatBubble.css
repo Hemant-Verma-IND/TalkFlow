@@ -1,0 +1,64 @@
+.msg-wrapper {
+  display: flex;
+  margin-bottom: 4px;
+  justify-content: flex-start;
+}
+
+.msg-bubble {
+  background: #202c33 !important; /* WhatsApp Dark Bubble */
+  border: none !important;
+  border-radius: 8px;
+  padding: 6px 10px 4px 10px !important;
+  max-width: 85%;
+  position: relative;
+  box-shadow: 0 1px 0.5px rgba(0,0,0,0.13) !important;
+}
+
+.msg-sender-name {
+  color: #ff8c00; /* Distinct color for sender */
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.msg-text {
+  color: #e9edef;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.msg-text b {
+  font-weight: 700;
+  color: #fff;
+}
+
+.msg-meta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -4px;
+}
+
+.msg-time-stamp {
+  font-size: 0.65rem;
+  color: #8696a0;
+  text-transform: uppercase;
+}
+
+/* System Message Style */
+.system-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.system-msg {
+  background: #182229;
+  color: #8696a0;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

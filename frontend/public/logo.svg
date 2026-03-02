@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Premium TalkFlow Gradient -->
+    <linearGradient id="tf-gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60a5fa" />
+      <stop offset="1" stop-color="#2563eb" />
+    </linearGradient>
+    
+    <!-- Soft Shadow for Depth -->
+    <filter id="tf-shadow" x="-4" y="-4" width="72" height="72">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0b0e14" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Main Shield Shape -->
+  <g filter="url(#tf-shadow)">
+    <path 
+      d="M32 4L10 12V28C10 42.5 19.5 56 32 60C44.5 56 54 42.5 54 28V12L32 4Z" 
+      fill="url(#tf-gradient)" 
+    />
+  </g>
+
+  <!-- The "Flow" / Checkmark Symbol inside -->
+  <path 
+    d="M20 30L27 37L44 20" 
+    stroke="white" 
+    stroke-width="5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+  
+  <!-- Subtle Shine/Gloss Effect (Top Right) -->
+  <path 
+    d="M32 4L54 12V28C54 32 53 35 51 38" 
+    stroke="white" 
+    stroke-width="2" 
+    stroke-opacity="0.2"
+    fill="none"
+  />
+</svg>
