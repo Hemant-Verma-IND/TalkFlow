@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment Variables (NEVER commit these)
+.env
+.env.local
+.env.production
+
+# Build Outputs
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# User Data (Don't commit uploaded chats)
+backend/data/
+backend/uploads/
+
+# OS System Files
+.DS_Store
+Thumbs.db
