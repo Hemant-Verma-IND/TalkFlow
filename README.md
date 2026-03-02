@@ -2,8 +2,7 @@
 
 > **A premium, encrypted vault for visualizing and archiving sensitive communication streams.**
 
-![alt text](image.png)
-*(Replace this link with a screenshot of your dashboard once deployed)*
+https://talkflow-iota.vercel.app/
 
 ## 🚀 Motivation & Philosophy
 

@@ -4,7 +4,7 @@ const generateToken = require('../utils/generateToken');
 const registerUser = async (req, res) => {
   const { username, email, password } = req.body;
 
-   if (!username || !email || !password) {
+  if (!username || !email || !password) {
     return res.status(400).json({ message: 'Please fill all fields' });
   }
 
@@ -17,11 +17,10 @@ const registerUser = async (req, res) => {
   });
 
   if (userExists) {
-    return res.status(400).json({ 
-      message: 'User already exists with this email or username' 
-    });
+    return res.status(400).json({ message: 'User already exists' });
   }
-const user = await User.create({
+
+  const user = await User.create({
     username,
     email: email.toLowerCase(),
     password
@@ -34,11 +33,10 @@ const user = await User.create({
     res.status(400).json({ message: 'Invalid user data' });
   }
 };
-};
 
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
-  const user = await User.findOne({ email });
+  const user = await User.findOne({ email: email.toLowerCase() });
 
   if (user && (await user.comparePassword(password))) {
     generateToken(res, user._id);
