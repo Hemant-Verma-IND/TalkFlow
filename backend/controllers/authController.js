@@ -17,7 +17,9 @@ const registerUser = async (req, res) => {
   });
 
   if (userExists) {
-    return res.status(400).json({ message: 'User already exists' });
+    return res.status(400).json({ 
+      message: 'User already exists with this email or username' 
+    });
   }
 
   const user = await User.create({
@@ -32,10 +34,12 @@ const registerUser = async (req, res) => {
   } else {
     res.status(400).json({ message: 'Invalid user data' });
   }
-};
+}; // Removed the extra }; that was here
 
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
+  
+  // Use toLowerCase() to match the registered email format
   const user = await User.findOne({ email: email.toLowerCase() });
 
   if (user && (await user.comparePassword(password))) {

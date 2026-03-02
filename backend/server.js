@@ -15,9 +15,7 @@ if (!fs.existsSync('./data')) {
 connectDB();
 
 const app = express();
-const allowedOrigins = [
-  'http://localhost:3000',
-];
+const allowedOrigins = process.env.HOSTLINK;
 app.use(securityHeaders);
 app.use(limiter);
 // app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
