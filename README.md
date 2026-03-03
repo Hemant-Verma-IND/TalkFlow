@@ -11,7 +11,8 @@
 [![Frontend Preview](./frontend/image.png)](https://talkflow-iota.vercel.app/)
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_TalkFlow-0A192F?style=for-the-badge\&logo=vercel\&logoColor=white)](https://talkflow-iota.vercel.app/)
-[![Security](https://img.shields.io/badge/Security-AES--256--CBC-1F4068?style=for-the-badge\&logo=shield\&logoColor=white)]
+
+[![Security](https://img.shields.io/badge/Security-AES--256--CBC-1F4068?style=for-the-badge\&logo=shield\&logoColor=white)](https://talkflow-iota.vercel.app/)
 
 
 </div>
