@@ -1,70 +1,131 @@
-# 🛡️ TalkFlow - Secure Communication Archival System
+<div align="center">
 
-> **A premium, encrypted vault for visualizing and archiving sensitive communication streams.**
+# 🛡️ TalkFlow
 
-https://talkflow-iota.vercel.app/
+### 🔐 Secure Communication Archival System
 
-## 🚀 Motivation & Philosophy
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2500&pause=800&color=00F5FF&center=true&vCenter=true&width=700&lines=Encryption+First+Architecture;AES-256+Encrypted+Vault;JWT+%2B+HttpOnly+Security;Visualising+Unstructured+Data;Built+with+Security+Engineering+Principles" />
 
-In the digital age, our most valuable data often lives in unstructured, ephemeral formats. Standard chat exports (like `.txt` files) are **insecure by default**—stored in plain text, difficult to navigate, and impossible to analyze effectively.
+<br/>
 
-I developed **TalkFlow** to solve three specific engineering challenges:
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_TalkFlow-0A192F?style=for-the-badge\&logo=vercel\&logoColor=white)](https://talkflow-iota.vercel.app/)
+[![Security](https://img.shields.io/badge/Security-AES--256--CBC-1F4068?style=for-the-badge\&logo=shield\&logoColor=white)]
+[![Backend](https://img.shields.io/badge/Backend-Node.js-3C873A?style=for-the-badge\&logo=node.js\&logoColor=white)]
+[![Database](https://img.shields.io/badge/Database-MongoDB-13AA52?style=for-the-badge\&logo=mongodb\&logoColor=white)]
 
-1.  **Data Sovereignty:** Giving users a self-hosted environment to own their communication history without relying on third-party cloud backups.
-2.  **Encryption at Rest:** Ensuring that raw text data is transformed into cyphertext before it ever touches the database, protecting it even in the event of a database compromise.
-3.  **Visualization of Unstructured Data:** transforming chaotic raw text logs into a structured, searchable, and premium "Chat UI" experience.
-
-TalkFlow is not just a viewer; it is a **security-first engineering project** demonstrating how to handle sensitive user data responsibly.
-
----
-
-## 🔐 Security Engineering Architecture
-
-Security was the primary driver for every architectural decision in TalkFlow.
-
-### 1. AES-256 Encryption Strategy
-*   **At Rest:** Message content is encrypted using **AES-256-CBC** before storage.
-*   **On Flight:** Data is decrypted only upon request by the authenticated user in the controller layer before being sent to the client.
-*   **Key Management:** Encryption keys are managed via environment variables, ensuring they are never hardcoded into the codebase.
-
-### 2. Stateless Authentication (JWT + HttpOnly)
-*   We moved away from LocalStorage for JWT storage to prevent **XSS (Cross-Site Scripting)** attacks.
-*   Tokens are stored in **HttpOnly, Secure Cookies**, making them inaccessible to client-side JavaScript.
-*   Passwords are hashed using **Bcrypt** with high salt rounds before persistence.
-
-### 3. Attack Surface Reduction
-*   **Helmet.js** is implemented to set secure HTTP headers (HSTS, X-Frame-Options).
-*   **Rate Limiting** is applied to Auth and Upload routes to prevent Brute Force and DDoS attempts.
-*   **Input Sanitization** prevents NoSQL Injection attacks.
+</div>
 
 ---
 
-## ✨ Key Features
+## ⚡ Overview
 
-### 🎨 Premium UI/UX
-*   **Glassmorphism Aesthetic:** A modern, deep-dark interface built with CSS variables and backdrop filters.
-*   **WebGL Backgrounds:** Custom OGL-based "Light Rays" animation for an immersive login experience.
-*   **Responsive Design:** Fully fluid layout that works across devices.
+> **TalkFlow** is a security-first encrypted vault engineered to transform raw chat exports into a structured, searchable, and premium visual archive.
 
-### 🧠 Intelligent Parsing Engine
-*   **Regex Pattern Matching:** Custom parser detects date formats (iOS/Android variants), system messages, and multi-line text blocks.
-*   **Scroll Spy & Calendar:** Dynamic date detection that updates the header calendar as you scroll through years of history.
-*   **Smart Search:** Instant frontend filtering of thousands of messages.
+Traditional chat backups are:
 
-### 🛠️ Data Management
-*   **Secure Upload:** Multer-based stream processing for large text files.
-*   **CRUD Operations:** Rename and securely delete archives (including cascading deletion of encrypted entries).
+* ❌ Plain text by default
+* ❌ Difficult to analyse
+* ❌ Insecure at rest
+
+TalkFlow addresses these challenges through strong encryption, hardened authentication, and intelligent parsing.
 
 ---
 
-## 💻 Tech Stack
+## 🔐 Security Architecture
 
-| Domain | Technology |
-| :--- | :--- |
-| **Frontend** | React.js, Lucide Icons, OGL (WebGL), Framer Motion |
-| **Backend** | Node.js, Express.js |
-| **Database** | MongoDB (Mongoose ORM) |
-| **Security** | Bcrypt, Crypto (Node Native), Helmet, Rate-Limit, JWT |
-| **Styling** | Pure CSS3 (Variables + Flexbox/Grid) |
+### 🧩 Encryption at Rest
+
+* AES-256-CBC encryption before database persistence
+* Encryption keys stored in environment variables
+* Decryption only within authenticated controller layer
+
+### 🔑 Stateless Authentication
+
+* JWT stored in **HttpOnly Secure Cookies**
+* Bcrypt hashing with strong salt rounds
+* No LocalStorage token storage
+
+### 🛡️ Backend Hardening
+
+* Helmet.js secure HTTP headers
+* Rate limiting on authentication and upload routes
+* Input sanitisation to prevent NoSQL injection
+* Secure file streaming with Multer
 
 ---
+
+## 🧠 Intelligent Parsing Engine
+
+* Regex detection for iOS & Android chat formats
+* Multi-line message reconstruction
+* System message classification
+* Scroll-based calendar synchronisation
+* Instant smart search across large datasets
+
+---
+
+## 🎨 Premium UI/UX
+
+* Glassmorphism dark interface
+* WebGL animated “Light Rays” background (OGL)
+* Framer Motion transitions
+* Fully responsive design
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer    | Technology                                   |
+| -------- | -------------------------------------------- |
+| Frontend | React.js, OGL (WebGL), Framer Motion, Lucide |
+| Backend  | Node.js, Express.js                          |
+| Database | MongoDB (Mongoose ORM)                       |
+| Security | AES-256, Bcrypt, JWT, Helmet, Rate-Limit     |
+| Styling  | Pure CSS3 (Variables, Flexbox, Grid)         |
+
+---
+
+## 🏗️ Engineering Philosophy
+
+```
+Assume Breach.
+Encrypt by Default.
+Minimise Attack Surface.
+Visualise Intelligently.
+```
+
+TalkFlow demonstrates:
+
+* Secure backend architecture
+* Stateless authentication implementation
+* Encryption lifecycle management
+* Efficient handling of unstructured communication logs
+* Production-grade API hardening
+
+---
+
+## 🚀 Local Setup
+
+```bash
+# Clone repository
+git clone https://github.com/your-username/talkflow.git
+
+# Install dependencies
+npm install
+
+# Configure environment variables
+MONGO_URI=
+JWT_SECRET=
+ENCRYPTION_KEY=
+
+# Start development server
+npm run dev
+```
+
+---
+
+<div align="center">
+
+### 🔐 Secure. Structured. Sovereign.
+
+</div>
