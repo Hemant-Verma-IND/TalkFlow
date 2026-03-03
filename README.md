@@ -4,11 +4,12 @@
 
 ### 🔐 Secure Communication Archival System
 
+[![Frontend Preview](./frontend/image.png)](https://talkflow-iota.vercel.app/)
+
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2500&pause=800&color=00F5FF&center=true&vCenter=true&width=700&lines=Encryption+First+Architecture;AES-256+Encrypted+Vault;JWT+%2B+HttpOnly+Security;Visualising+Unstructured+Data;Built+with+Security+Engineering+Principles" />
 
 <br/>
 
-[![Frontend Preview](./frontend/image.png)](https://talkflow-iota.vercel.app/)
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_TalkFlow-0A192F?style=for-the-badge\&logo=vercel\&logoColor=white)](https://talkflow-iota.vercel.app/)
 
